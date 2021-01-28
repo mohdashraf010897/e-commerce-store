@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ArrowHeadDown from "./../../../assets/images/arrow-head-down.svg";
-import { setSortOption } from "./../../../redux/Actions/shop";
+import { setSortOption } from "../../../redux/Actions/shop";
 import { connect } from "react-redux";
-import { SORT_OPTIONS } from "./../../../constants/index";
+import { SORT_OPTIONS } from "../../../constants/index";
 
 const SortDropdown = ({ sortOption, setSortOption }) => {
   const [showDropdown, setShowDropdown] = useState(false);
