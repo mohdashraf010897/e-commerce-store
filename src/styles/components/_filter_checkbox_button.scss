@@ -1,0 +1,29 @@
+label {
+  position: relative;
+
+  input {
+    @include absCenter;
+    z-index: -2;
+  }
+}
+.filter-checkbox-button {
+  @include flexCenter;
+  width: 115px;
+  height: 42px;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid $color-grey-light;
+  color: $color-grey-dark;
+  box-sizing: border-box;
+  border-radius: 42px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 14px;
+  text-transform: capitalize;
+  background: $color-white;
+  &.selected {
+    border-color: $color-black;
+    color: $color-black;
+  }
+}

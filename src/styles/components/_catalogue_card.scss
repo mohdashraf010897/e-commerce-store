@@ -1,0 +1,154 @@
+.catalogue-card {
+  @include flexCenter;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 440px;
+  position: relative;
+  &__img {
+    width: 262px;
+    height: 349px;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__details {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    padding: 15px;
+    width: 100%;
+    background: $color-white;
+    display: flex;
+    flex-direction: column;
+
+    .size-selection {
+      display: none;
+      & > h3 {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: capitalize;
+        margin-bottom: 11px;
+      }
+      .size-button {
+        cursor: pointer;
+        width: 37px;
+        height: 37px;
+        border: 1px solid $color-grey-light;
+        box-sizing: border-box;
+        font-weight: 600;
+        font-size: 1.4rem;
+        line-height: 16px;
+        text-transform: capitalize;
+        border-radius: 100%;
+        &:not(:last-child) {
+          margin-right: 11px;
+        }
+        &.selected {
+          border-color: $color-black;
+        }
+
+        &:hover {
+          box-shadow: 0 0 2px $color-primary;
+        }
+      }
+    }
+    .add-to-cart-cta {
+      height: 36px;
+      width: 88.5%;
+      margin: 7px auto 0px;
+      border: 1px solid $color-grey-dark;
+      box-sizing: border-box;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 16px;
+      text-transform: capitalize;
+      &:hover {
+        box-shadow: 0 0 2px $color-grey-light;
+        border-color: $color-black;
+      }
+
+      &:active {
+        background: $color-grey-light-1;
+      }
+    }
+    .product-brand {
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 19px;
+      text-transform: capitalize;
+      margin-bottom: 8px;
+    }
+
+    .product-name,
+    .sizes-available {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: capitalize;
+      color: #878787;
+      display: inline-block;
+      margin-bottom: 8px;
+      width: 232px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .sizes-available {
+      display: none;
+      margin: 17px 0 8px;
+    }
+    .product-pricing {
+      font-weight: 300;
+      font-size: 1.2rem;
+      line-height: 14px;
+      &__discounted {
+        margin-right: 5px;
+        font-weight: bold;
+        font-size: 1.4rem;
+        line-height: 16px;
+        text-transform: capitalize;
+      }
+
+      &__actual {
+        text-decoration-line: line-through;
+        text-transform: capitalize;
+        margin-right: 3px;
+        color: $color-grey-dark;
+      }
+
+      &__discount-percentage {
+        color: #ff6c6c;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &:hover {
+    .catalogue-card__details {
+      .size-selection {
+        display: unset;
+      }
+      .sizes-available {
+        display: inline-block;
+      }
+      .product-brand,
+      .product-name {
+        display: none;
+      }
+    }
+  }
+
+  [data-visible="false"] {
+    display: none;
+  }
+
+  [data-visible="true"] {
+    display: inline-block;
+  }
+}

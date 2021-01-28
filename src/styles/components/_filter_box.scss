@@ -1,0 +1,16 @@
+.filter-box {
+  @include flexCenter;
+  label {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 19px;
+    text-transform: capitalize;
+    margin-right: 15px;
+  }
+
+  &__options {
+    @include flexCenter;
+    grid-column-gap: 8px;
+  }
+}

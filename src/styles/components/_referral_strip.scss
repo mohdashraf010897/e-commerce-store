@@ -1,0 +1,31 @@
+.referral-strip {
+  @include flexCenter;
+  height: 53px;
+  width: 100%;
+  grid-column-gap: 28px;
+  background: linear-gradient(90.06deg, #181716 0%, #ed4e08 99.97%);
+  font-style: normal;
+  text-transform: capitalize;
+  &__text {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 19px;
+    color: $color-white;
+  }
+
+  &__invite-btn {
+    width: 94px;
+    height: 29px;
+    border-radius: 20px;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 15px;
+    &:hover {
+      box-shadow: 0 0px 6px 0 rgba($color-grey-light, 0.5);
+    }
+
+    &:active {
+      box-shadow: inset 1px 1px 10px $color-grey-light;
+    }
+  }
+}

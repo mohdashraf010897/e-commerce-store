@@ -1,0 +1,7 @@
+const ShopActionTypes = {
+  ADD_FILTER_OPTION: "ADD_FILTER_OPTION",
+  REMOVE_FILTER_OPTION: "REMOVE_FILTER_OPTION",
+  SET_SORT_OPTION: "SET_SORT_OPTION",
+};
+
+export default ShopActionTypes;
