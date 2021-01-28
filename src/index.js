@@ -12,7 +12,7 @@ import {
 import "./styles/main.scss";
 
 import { store, persistor } from "./redux/store";
-import ErrorBoundary from "./components/ErrorBoundary";
+import ErrorBoundary from "./components/common/ErrorBoundary";
 import NotFound from "./pages/NotFound";
 import ProductLanding from "./pages/ProductLanding";
 //being only one page, Routing is deliberately being ignored

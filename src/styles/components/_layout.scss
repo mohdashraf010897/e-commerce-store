@@ -29,4 +29,16 @@
       }
     }
   }
+
+  @include respond(tab-port) {
+    &__body {
+      padding: 12px 6px;
+
+      &--breadcrumb {
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
 }

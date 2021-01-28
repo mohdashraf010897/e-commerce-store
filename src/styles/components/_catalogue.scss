@@ -29,4 +29,44 @@
     grid-column-gap: 2rem;
     grid-row-gap: 5rem;
   }
+
+  @include respond(tab-port) {
+    &__header {
+      padding: 10px 0 18px;
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 9px;
+      }
+
+      &--filter-n-sort {
+        flex-wrap: wrap;
+        justify-content: center;
+        grid-gap: 17px;
+
+        .filter-box {
+          flex-wrap: wrap;
+          border-bottom: 1px dashed $color-grey-light-1;
+          padding-bottom: 11px;
+          label {
+            margin-right: 0;
+          }
+          &__options {
+            grid-column-gap: 5px;
+            flex-wrap: wrap;
+            grid-row-gap: 6px;
+
+            label {
+              margin-bottom: 0;
+
+              span {
+                width: 96px;
+                height: 36px;
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -27,15 +27,16 @@
         @include flexCenter;
         flex-direction: column;
         height: unset;
-        width: 200px;
+        width: 100%;
         position: absolute;
         z-index: 100;
         border-radius: 1.4rem;
         border: 1px solid $color-grey-dark;
         padding: 10px;
         top: 31px;
-        left: -24px;
+        left: 50%;
         background: $color-white;
+        transform: translateX(-47%);
 
         span {
           width: 100%;
@@ -52,6 +53,15 @@
           }
         }
       }
+    }
+  }
+
+  @include respond(tab-port) {
+    width: 100%;
+    max-width: 350px;
+
+    span {
+      width: 100%;
     }
   }
 }
