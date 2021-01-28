@@ -6,7 +6,7 @@ import { RAW_SHOP_DATA } from "../../constants";
 
 const Catalogue = ({ shopInventory }) => {
   const populateCards = () => {
-    return shopInventory?.map((item) => (
+    return shopInventory.map((item) => (
       <CatalogueCard key={item.id} item={item} />
     ));
   };

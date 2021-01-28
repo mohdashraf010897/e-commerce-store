@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Layout from "./../components/common/Layout/index";
-import Catalogue from "./../components/Catalogue/index";
+import Layout from "../components/common/Layout/index";
+import Catalogue from "../components/Catalogue/index";
 import { connect } from "react-redux";
 
 class ProductLanding extends Component {
