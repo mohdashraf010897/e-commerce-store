@@ -10,11 +10,12 @@
 
 ## Quick Features
 
-@ No styling framework used here, all Hand-crafted
-@ App uses Redux( Thunk as middleware)
-@ Responsiveness added
-@ Error Boundaries for App level error handling
-@ Cart is made with a functionality of removing items
+1. No styling framework used here, all Hand-crafted
+2. App uses Redux( Thunk as middleware)
+3. Responsiveness added
+4. Error Boundaries for App level error handling
+5. 404 fallback for nout found pages
+6. Cart is made with a functionality of removing items
 
 ### I have put genuine effort into this, any questions are always WELCOME.
 
