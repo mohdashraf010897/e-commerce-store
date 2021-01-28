@@ -1,3 +1,7 @@
+# Live Link
+
+[https://secret-shop-stop.netlify.app/](https://secret-shop-stop.netlify.app/)
+
 # Getting Started with the App
 
 1. Clone the repository
