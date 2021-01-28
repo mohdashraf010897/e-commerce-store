@@ -5,13 +5,19 @@ import SearchIcon from "./../../../assets/images/search-icon.svg";
 import ProfileIcon from "./../../../assets/images/profile-icon.svg";
 import CartIcon from "./../../../assets/images/cart-icon.svg";
 import ArrowHeadDown from "./../../../assets/images/arrow-head-down.svg";
-import { removeCartItem } from "../../../redux/Actions/cart";
+import {
+  removeCartItem,
+  toggleCartVisibility,
+} from "../../../redux/Actions/cart";
 import { connect } from "react-redux";
 import CartDropdown from "../../CartDropdown";
 
-const Navbar = ({ cartItems, removeCartItem }) => {
-  const [openCartDropdown, setOpenCartDropdown] = useState(false);
-
+const Navbar = ({
+  cartItems,
+  removeCartItem,
+  toggleCartVisibility,
+  isCartVisible,
+}) => {
   return (
     <nav className="navbar">
       <a href="/" className="logo">
@@ -47,10 +53,10 @@ const Navbar = ({ cartItems, removeCartItem }) => {
         </span>
         <span
           className="user-utilities__cart"
-          onClick={() => setOpenCartDropdown(!openCartDropdown)}
+          onClick={() => toggleCartVisibility()}
         >
           <CartDropdown
-            open={openCartDropdown}
+            open={isCartVisible}
             cartItems={cartItems}
             removeCartItem={removeCartItem}
           />
@@ -69,11 +75,13 @@ const Navbar = ({ cartItems, removeCartItem }) => {
 const mapStateToProps = (state) => {
   return {
     cartItems: state.cart.cartItems,
+    isCartVisible: state.cart.isCartVisible,
   };
 };
 
 const mapDispatchToProps = {
   removeCartItem,
+  toggleCartVisibility,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

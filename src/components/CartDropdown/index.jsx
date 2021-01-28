@@ -33,7 +33,10 @@ const CartDropdown = ({ open, cartItems, removeCartItem }) => {
     ));
 
   return (
-    <div className={`cart-dropdown ${open ? "open" : ""}`}>
+    <div
+      className={`cart-dropdown ${open ? "open" : ""}`}
+      onClick={(e) => e.stopPropagation()}
+    >
       <div className="cart-dropdown-options">
         {!!cartItems.length ? (
           mapCartItemsToJsx()

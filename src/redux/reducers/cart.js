@@ -2,6 +2,7 @@ import CartActionTypes from "./../ActionTypes/cart";
 
 const INITIAL_STATE = {
   cartItems: [],
+  isCartVisible: false,
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
@@ -19,6 +20,13 @@ const cartReducer = (state = INITIAL_STATE, action) => {
           (cartItem) => cartItem.id !== action.payload
         ),
       };
+
+    case CartActionTypes.TOGGLE_CART_VISIBILITY: {
+      return {
+        ...state,
+        isCartVisible: !state.isCartVisible,
+      };
+    }
 
     default:
       return state;
