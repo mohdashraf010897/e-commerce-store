@@ -1,4 +1,4 @@
-# Getting Started App
+# Getting Started with the App
 
 1. Clone the repository
 2. Install Packages using yarn/ npm.
