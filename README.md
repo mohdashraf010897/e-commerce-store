@@ -14,7 +14,7 @@
 2. App uses Redux( Thunk as middleware)
 3. Responsiveness added
 4. Error Boundaries for App level error handling
-5. 404 fallback for nout found pages
+5. 404 fallback for not found pages
 6. Cart is made with a functionality of removing items
 
 ### I have put genuine effort into this, any questions are always WELCOME.
