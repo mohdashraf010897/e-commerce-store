@@ -4,7 +4,7 @@ import { setSortOption } from "./../../../redux/Actions/shop";
 import { connect } from "react-redux";
 import { SORT_OPTIONS } from "./../../../constants/index";
 
-const CapsuleDropdown = ({ sortOption, setSortOption }) => {
+const SortDropdown = ({ sortOption, setSortOption }) => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   const mapSortOptionsToJsx = () => {
@@ -39,4 +39,4 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = { setSortOption };
-export default connect(mapStateToProps, mapDispatchToProps)(CapsuleDropdown);
+export default connect(mapStateToProps, mapDispatchToProps)(SortDropdown);

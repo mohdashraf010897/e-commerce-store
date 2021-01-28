@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FilterBox from "./../common/FilterBox/index";
-import CapsuleDropdown from "./../common/CapsuleDropdown/index";
+import SortDropdown from "./../common/SortDropdown/index";
 import CatalogueCard from "../CatalogueCard";
 import { RAW_SHOP_DATA } from "../../constants";
 
@@ -19,7 +19,7 @@ const Catalogue = ({ shopInventory }) => {
         </h2>
         <div className="catalogue__header--filter-n-sort">
           <FilterBox />
-          <CapsuleDropdown />
+          <SortDropdown />
         </div>
       </div>
       <div className="catalogue__body">{populateCards()}</div>
